@@ -1,0 +1,449 @@
+/* ============================================
+   Faculty Evaluation System - Custom Styles
+   ============================================ */
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #3b82f6;
+    --light-bg: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+}
+
+/* ============================================
+   Page Header
+   ============================================ */
+
+.page-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+.card-header i {
+    margin-right: 8px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* ============================================
+   Forms
+   ============================================ */
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6b7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
+    color: white;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #059669;
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+    color: white;
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #d97706;
+    color: white;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+.table {
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background-color: var(--light-bg);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+    color: #1f2937;
+    padding: 15px;
+    text-align: left;
+}
+
+.table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: var(--light-bg);
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* ============================================
+   Badges
+   ============================================ */
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+}
+
+.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+.bg-danger {
+    background-color: var(--danger-color) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning-color) !important;
+}
+
+.bg-info {
+    background-color: var(--info-color) !important;
+}
+
+/* ============================================
+   Alerts
+   ============================================ */
+
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 15px 20px;
+}
+
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+}
+
+.alert-warning {
+    background-color: #fef3c7;
+    color: #78350f;
+}
+
+.alert-info {
+    background-color: #dbeafe;
+    color: #0c2d6b;
+}
+
+.alert i {
+    margin-right: 8px;
+}
+
+/* ============================================
+   Sidebar Navigation
+   ============================================ */
+
+.sidebar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 20px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: white;
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+/* ============================================
+   Navbar
+   ============================================ */
+
+.navbar {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    font-size: 20px;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+/* ============================================
+   Action Buttons
+   ============================================ */
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+    margin: 0;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 10px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+.text-muted {
+    color: #6b7280 !important;
+}
+
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.text-danger {
+    color: var(--danger-color) !important;
+}
+
+.text-warning {
+    color: var(--warning-color) !important;
+}
+
+.text-info {
+    color: var(--info-color) !important;
+}
+
+.gap-2 {
+    gap: 8px !important;
+}
+
+.gap-3 {
+    gap: 12px !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ============================================
+   Loading Spinner
+   ============================================ */
+
+.spinner-border {
+    color: var(--primary-color);
+}
+
+/* ============================================
+   Transitions
+   ============================================ */
+
+a {
+    transition: all 0.3s ease;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+input,
+select,
+textarea {
+    transition: all 0.3s ease;
+}
