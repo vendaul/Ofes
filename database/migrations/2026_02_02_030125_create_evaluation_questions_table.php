@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('evaluation_questions', function (Blueprint $table) {
             $table->id();
+            $table->string('question_text');
+            $table->string('category');
             $table->timestamps();
         });
     }
