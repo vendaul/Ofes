@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             // Legacy assignment id kept nullable for backward compatibility.
             $table->unsignedBigInteger('asign_id')->nullable();
-            $table->unsignedInteger('class_schedule_id')->nullable();
+            $table->unsignedBigInteger('class_schedule_id')->nullable();
             $table->integer('total_evaluations')->default(0);
             $table->decimal('overall_average', 3, 2)->nullable();
             $table->string('overall_rating', 20)->nullable();
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->timestamp('last_updated')->nullable();
             $table->timestamps();
 
-            $table->foreign('class_schedule_id')->references('id')->on('db_class_schedules')->onDelete('cascade');
+            // $table->foreign('class_schedule_id')->references('id')->on('db_class_schedules')->onDelete('cascade');
             $table->unique('class_schedule_id'); // One result per class schedule
         });
     }

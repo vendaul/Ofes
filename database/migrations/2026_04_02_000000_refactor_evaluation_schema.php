@@ -9,21 +9,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        // Add supervisor assignment table for faculty-to-faculty evaluations.
-        if (!Schema::hasTable('supervisor_assignments')) {
-            Schema::create('supervisor_assignments', function (Blueprint $table) {
-                $table->id();
-                $table->unsignedBigInteger('supervisor_id');
-                $table->unsignedBigInteger('instructor_id');
-                $table->unsignedInteger('class_schedule_id');
-                $table->timestamps();
-
-                $table->foreign('supervisor_id')->references('id')->on('users')->onDelete('cascade');
-                $table->foreign('instructor_id')->references('id')->on('users')->onDelete('cascade');
-                $table->foreign('class_schedule_id')->references('id')->on('db_class_schedules')->onDelete('cascade');
-                $table->unique(['supervisor_id', 'instructor_id', 'class_schedule_id'], 'unique_supervisor_assignment');
-            });
-        }
+        // ...existing code...
 
         // Add fields to evaluations table to support unified model and eliminate asign_id use.
         Schema::table('evaluations', function (Blueprint $table) {
@@ -71,8 +57,8 @@ return new class extends Migration
 
     public function down(): void
     {
-        if (Schema::hasTable('supervisor_assignments')) {
-            Schema::dropIfExists('supervisor_assignments');
+        if (Schema::hasTable('db_supervisor_assignments')) {
+            Schema::dropIfExists('db_supervisor_assignments');
         }
 
         Schema::table('evaluations', function (Blueprint $table) {

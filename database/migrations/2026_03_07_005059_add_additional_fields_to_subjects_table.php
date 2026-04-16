@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('subjects', function (Blueprint $table) {
+        Schema::table('db_subjects', function (Blueprint $table) {
             $table->text('description')->nullable();
             $table->string('year_section')->nullable();
             $table->string('lecture_day')->nullable();
@@ -27,7 +27,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('subjects', function (Blueprint $table) {
+        Schema::table('db_subjects', function (Blueprint $table) {
             $table->dropColumn(['description', 'year_section', 'lecture_day', 'lecture_room', 'laboratory_day', 'laboratory_room', 'regular_irregular']);
         });
     }
